@@ -44,3 +44,14 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :contentful do |f|
+  f.space         = { morganeguerit: 't8tjfrku80c5' }
+  f.access_token  = 'sveCfRiwFFJKuefiQem91upKb8Md10Mpyli180W7Uv0'
+  f.cda_query     = { limit: 1000 }
+  f.content_types = {
+    'author': 'author',
+    'image': 'image',
+    'photoGallery': 'photoGallery'
+  }
+end
