@@ -1,16 +1,73 @@
 <!doctype html>
 <html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
+    <base href="<%= config[:root_uri] %>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <title><%= current_page.data.title || config[:site_name] %> - <%= config[:site_name] %></title>
+    <meta name="description" content="<%= current_page.data.description || config[:site_description] %>">
+    <meta name="keywords" content="<%= current_page.data.keywords || config[:site_keywords] %>">
+
+    <!-- Meta description -->
+    <meta property="og:local" content="<%= current_page.data.local || config[:site_local] %>">
+    <meta property="og:type" content="<%= current_page.data.type || config[:site_page_type] %>">
+    <meta property="og:title" content="<%= current_page.data.title || config[:site_name] %>">
+    <meta property="og:description" content="<%= current_page.data.description || config[:site_description] %>">
+    <meta property="og:url" content="<%= config[:site_url] + current_page.url %>">
+    <meta property="og:site_name" content="<%= config[:site_name] %>">
+    <meta property="article:tag" content="<%= current_page.data.keywords %>">
+    <meta property="article:section" content="<%= current_page.data.section %>">
+    <meta property="article:published_time" content="<%= current_page.data.published_time %>">
+    <meta property="article:modified_time" content="<%= current_page.data.modified_time %>">
+    <meta property="og:image" content="<%= current_page.data.image || config[:site_image] %>">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="<%= current_page.data.card || config[:twitter_card] %>">
+    <meta name="twitter:description" content="<%= current_page.data.description || config[:site_description] %>">
+    <meta name="twitter:title" content="<%= current_page.data.title || config[:site_name] %>">
+    <meta name="twitter:site" content="<%= config[:site_url] %>">
+    <meta name="twitter:image" content="<%= current_page.data.twitter_image %>">
+    <meta name="twitter:creator" content="<%= current_page.data.author || config[:site_author] %>">
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-180x180-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-152x152-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-144x144-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-120x120-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-114x114-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-76x76-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-72x72-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-60x60-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="apple-touch-icon" sizes="57x57" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-57x57-precomposed.#{config[:favicon_extension]}") %>">
+    <link rel="icon" sizes="196x196" href="<%= image_path("#{config[:favicon_path]}favicon-196.#{config[:favicon_extension]}") %>" type="<%= "image/#{config[:favicon_extension]}" %>">
+    <link rel="icon" sizes="160x160" href="<%= image_path("#{config[:favicon_path]}favicon-160.#{config[:favicon_extension]}") %>" type="<%= "image/#{config[:favicon_extension]}" %>">
+    <link rel="icon" sizes="96x96" href="<%= image_path("#{config[:favicon_path]}favicon-96.#{config[:favicon_extension]}") %>" type="<%= "image/#{config[:favicon_extension]}" %>">
+    <link rel="icon" sizes="32x32" href="<%= image_path("#{config[:favicon_path]}favicon-32.#{config[:favicon_extension]}") %>" type="<%= "image/#{config[:favicon_extension]}" %>">
+    <link rel="icon" sizes="16x16" href="<%= image_path("#{config[:favicon_path]}favicon-16.#{config[:favicon_extension]}") %>" type="<%= "image/#{config[:favicon_extension]}" %>">
+    <link rel="icon" href="<%= image_path("#{config[:favicon_path]}favicon.#{config[:favicon_extension]}") %>" type="image/#{config[:favicon_extension]}">
+    <link rel="shortcut icon" href="<%= image_path("#{config[:favicon_path]}favicon.ico") %>" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="<%= image_path("#{config[:favicon_path]}mstile-144x144.#{config[:favicon_extension]}") %>">
+    <link rel="manifest" href="<%= image_path("#{config[:favicon_path]}manifest.json") %>">
+
+    <!-- Color Theme -->
+    <meta name="theme-color" content="<%= config[:site_color] %>">
+    <meta name="msapplication-navbutton-color" content="<%= config[:site_color] %>">
+    <meta name="apple-mobile-web-app-status-bar-style" content="<%= config[:site_color] %>">
+    <meta name="msapplication-TileColor" content="<%= config[:site_color] %>">
+
+    <%= stylesheet_link_tag "application" %>
   </head>
   <body>
     <%= yield %>
+    <%= google_analytics_tag %>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>

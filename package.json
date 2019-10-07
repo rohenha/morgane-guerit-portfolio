@@ -1,0 +1,12 @@
+{
+  "name": "morgane-guerit-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rohenha/morgane-guerit-portfolio.git",
+  "author": "Romain Breton",
+  "license": "MIT",
+  "scripts": {
+  },
+  "devDependencies": {
+  }
+}

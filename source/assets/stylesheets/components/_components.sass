@@ -1,0 +1,56 @@
+.separator
+    // margin: 0 20px 0 0
+    padding: 0 0 0 20px
+    position: relative
+
+    &::before
+        background-color: $color-1
+        content: ""
+        display: block
+        height: 100%
+        left: 0
+        opacity: .3
+        position: absolute
+        top: 0
+        width: 1px
+
+
+.button
+    background-color: $color-1
+    border: 2px solid darken($color-1, $color-dark)
+    border-radius: 5px
+    color: $color-5
+    display: inline-block
+    max-width: 180px
+    padding: 4px 20px
+    text-align: center
+    transition: background .2s ease-in-out
+
+    &:hover
+        background-color: darken($color-1, $color-dark)
+
+
+.link
+    color: $color-1
+    font-family: $font-regular
+    padding: 2px 5px
+    position: relative
+    text-decoration: none
+
+    &::before
+        bottom: 0
+        height: 50%
+        opacity: .1
+        transition: height .2s ease-in-out
+
+    &:hover,
+    &:focus,
+    &__active
+        text-decoration: none
+
+        &::before
+            height: 100%
+            opacity: .1
+
+hr
+    border: .03125rem solid rgba($color-1, .2)

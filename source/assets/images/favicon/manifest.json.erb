@@ -1,0 +1,21 @@
+{
+  "short_name": "<%= config[:site_name_short] %>",
+  "name": "<%= config[:site_name] %>",
+  "icons": [
+    {
+      "src": "<%= image_path("favicon/favicon-192.#{config[:favicon_extension]}") %>",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "<%= image_path("favicon/favicon-512.#{config[:favicon_extension]}") %>",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "<%= config[:site_color] %>",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "<%= config[:site_color] %>"
+}

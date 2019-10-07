@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="<%= image_path("#{config[:favicon_path]}mstile-70x70.#{config[:favicon_extension]}") %>"/>
+      <square150x150logo src="<%= image_path("#{config[:favicon_path]}mstile-150x150.#{config[:favicon_extension]}") %>"/>
+      <square310x310logo src="<%= image_path("#{config[:favicon_path]}mstile-310x310.#{config[:favicon_extension]}") %>"/>
+      <wide310x150logo src="<%= image_path("#{config[:favicon_path]}mstile-310x150.#{config[:favicon_extension]}") %>"/>
+      <TileColor><%= config[:site_color] %></TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
