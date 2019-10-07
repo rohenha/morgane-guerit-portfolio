@@ -169,7 +169,7 @@ end
 configure :build do
     config[:root_uri] = '/'
     activate :gzip
-    # activate :minify_html
+    activate :minify_html
     # activate :asset_hash
     activate :minify_css
     activate :minify_javascript
