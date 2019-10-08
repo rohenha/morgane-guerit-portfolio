@@ -3,5 +3,5 @@
 .DS_Store
 .sass-cache
 build/
-data/
+data/morganeguerit
 .tmp/
