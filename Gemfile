@@ -14,7 +14,7 @@ gem 'sass-globbing', '~> 1.1'
 gem 'middleman-gdpr'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'rspec'
-gem 'nokogiri'
+gem "nokogiri", ">= 1.10.4"
 gem 'mini_racer' # faster JS compiles
 gem 'oj' # faster JSON parser and object serializer
 gem "middleman-minify-html"
