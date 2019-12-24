@@ -1,5 +1,7 @@
 require 'builder'
 require 'jasmine'
+# Activate and configure extensions
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 ########################
 #
@@ -65,20 +67,17 @@ activate :relative_assets
 activate :i18n, langs: [:fr]
 activate :gdpr
 
+# Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/templates/*.erb', layout: false
 page '/components/*.erb', layout: false
-page '/sitemap.xml', :layout => false
+page "/sitemap.xml", :layout => false
+page "/sitemap.html", :layout => false
 sprockets.append_path File.join(root, 'bower_components')
 sprockets.append_path File.join(root, 'node_modules')
 
-########################
-#
-# Folders paths
-#
-########################
 set :relative_links, true
 set :strip_index_file, true
 set :trailing_slash,   true

@@ -1,16 +1,11 @@
 <!doctype html>
-<html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-cursor" ng-app="hermes-table-interactive" ng-controller="AppController">
   <head>
     <meta charset="utf-8">
     <base href="<%= config[:root_uri] %>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || config[:site_name] %> - <%= config[:site_name] %></title>
     <meta name="description" content="<%= current_page.data.description || config[:site_description] %>">
@@ -23,10 +18,10 @@
     <meta property="og:description" content="<%= current_page.data.description || config[:site_description] %>">
     <meta property="og:url" content="<%= config[:site_url] + current_page.url %>">
     <meta property="og:site_name" content="<%= config[:site_name] %>">
-    <meta property="article:tag" content="<%= current_page.data.keywords %>">
-    <meta property="article:section" content="<%= current_page.data.section %>">
-    <meta property="article:published_time" content="<%= current_page.data.published_time %>">
-    <meta property="article:modified_time" content="<%= current_page.data.modified_time %>">
+    <meta property="article:tag" content="">
+    <meta property="article:section" content="">
+    <meta property="article:published_time" content="">
+    <meta property="article:modified_time" content="">
     <meta property="og:image" content="<%= current_page.data.image || config[:site_image] %>">
 
     <!-- Twitter Meta -->
@@ -34,9 +29,10 @@
     <meta name="twitter:description" content="<%= current_page.data.description || config[:site_description] %>">
     <meta name="twitter:title" content="<%= current_page.data.title || config[:site_name] %>">
     <meta name="twitter:site" content="<%= config[:site_url] %>">
-    <meta name="twitter:image" content="<%= current_page.data.twitter_image %>">
+    <meta name="twitter:image" content="">
     <meta name="twitter:creator" content="<%= current_page.data.author || config[:site_author] %>">
 
+    <!-- Icon -->
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-180x180-precomposed.#{config[:favicon_extension]}") %>">
     <link rel="apple-touch-icon" sizes="152x152" href="<%= image_path("#{config[:favicon_path]}apple-touch-icon-152x152-precomposed.#{config[:favicon_extension]}") %>">
@@ -66,8 +62,7 @@
     <%= stylesheet_link_tag "application" %>
   </head>
   <body>
-    <%= yield %>
-    <%= google_analytics_tag %>
-    <%= javascript_include_tag "application" %>
+      <%= yield %>
+      <%= javascript_include_tag "application" %>
   </body>
 </html>
