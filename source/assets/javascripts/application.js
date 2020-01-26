@@ -1,2 +1,1 @@
-//= require_tree ./vendors
-//= require _app.js
+// This is where it all goes :)
