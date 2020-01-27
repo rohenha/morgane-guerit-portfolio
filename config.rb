@@ -13,6 +13,12 @@ activate :autoprefixer do |config|
     config.inline = true
 end
 
+activate :directory_indexes
+activate :sprockets
+activate :relative_assets
+activate :i18n, langs: [:fr]
+activate :gdpr
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -21,13 +27,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-activate :directory_indexes
-# activate :sprockets
-activate :relative_assets
-activate :i18n, langs: [:fr]
-# activate :gdpr
-# sprockets.append_path File.join(root, 'bower_components')
-# sprockets.append_path File.join(root, 'node_modules')
+sprockets.append_path File.join(root, 'bower_components')
+sprockets.append_path File.join(root, 'node_modules')
 #
 set :relative_links, true
 set :strip_index_file, true

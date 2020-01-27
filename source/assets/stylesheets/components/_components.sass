@@ -12,6 +12,28 @@
     &:hover
         border-color: rgba($color-1, .6)
 
+    &__borderless
+        border: 0px
+        padding-left: 10px
+        padding-right: 10px
+        &.button__arrow--left::after
+            left: 10px
+        &.button__arrow--right::before
+            right: 10px
+
+    &__primary
+        color: $color-2
+        &.button__arrow--left
+            &::before
+                background-color: $color-2
+            &::after
+                border-color: $color-2
+        &.button__arrow--right
+            &::before
+                border-color: $color-2
+            &::after
+                background-color: $color-2
+
     &__icon
         padding: 15px
         img
@@ -61,3 +83,52 @@
                     transform: translate(5px, -50%) rotate(45deg)
                 &::after
                     transform: translateX(5px)
+
+
+.hamburger
+    cursor: pointer
+    display: inline-block
+    height: 2px
+    padding: 10px 0 13px
+    position: relative
+    width: 35px
+
+    &::before,
+    &::after,
+    span
+        background-color: $color-1
+        content: ""
+        display: block
+        height: 3px
+        width: 100%
+
+    span
+        transition: opacity 0s ease-in-out .3s
+
+    &::before,
+    &::after
+        position: absolute
+        left: 0
+        transform: translate(0, -50%)
+        transition: top .3s ease-in-out .3s, transform .3s ease-in-out
+
+    &::before
+        top: 0
+
+    &::after
+        top: 100%
+
+    &.active
+        span
+            opacity: 0
+
+        &::before,
+        &::after
+            top: 50%
+            transition: top .3s ease-in-out, transform .3s ease-in-out .3s
+
+        &::before
+            transform: translate(0, -50%) rotate(45deg)
+
+        &::after
+            transform: translate(0, -50%) rotate(-45deg)
