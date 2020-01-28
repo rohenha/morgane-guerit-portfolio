@@ -25,9 +25,9 @@
         height: 100vh
         justify-content: center
         left: 0
+        padding: 70px 20px 20px
         position: fixed
         top: 0
-        padding: 70px 20px 20px
         transform: translate(100%, 0)
         transition: transform .3s ease-in-out
         z-index: 20
@@ -81,12 +81,13 @@
         nav
             height: inherit
             justify-content: flex-end
-            position: inherit
             padding: 0
+            position: inherit
             transform: translate(0, 0)
             transition: inherit
 
             ul
+                display: block
                 text-align: right
                 width: 100%
                 li
@@ -95,3 +96,8 @@
                         margin: 0 0 0 10px
                     &:last-child
                         margin: 0 0 0 30px
+
+                    &:hover
+                        &:before
+                            opacity: 0.2
+                            transform: translate(0, 0)

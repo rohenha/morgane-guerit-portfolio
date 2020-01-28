@@ -1,0 +1,85 @@
+.button
+    border: 1px solid rgba($color-1, .2)
+    border-radius: 30px
+    color: $color-1
+    cursor: pointer
+    display: inline-block
+    padding: 10px 30px
+    position: relative
+    text-decoration: none
+    transition: border-color .2s ease-in-out
+
+    &:hover
+        border-color: rgba($color-1, .6)
+
+    &__borderless
+        border: 0px
+        padding-left: 10px
+        padding-right: 10px
+        &.button__arrow--left::after
+            left: 10px
+        &.button__arrow--right::before
+            right: 10px
+
+    &__primary
+        color: $color-2
+        &.button__arrow--left
+            &::before
+                background-color: $color-2
+            &::after
+                border-color: $color-2
+        &.button__arrow--right
+            &::before
+                border-color: $color-2
+            &::after
+                background-color: $color-2
+
+    &__icon
+        padding: 15px
+        img
+            width: 15px
+    &__arrow
+        &--right,
+        &--left
+            &::before,
+            &::after
+                content: ""
+                display: inline-block
+                transition: transform .2s ease-in-out
+
+        &--right::after,
+        &--left::before
+            background-color: $color-1
+            height: 2px
+            vertical-align: middle
+            width: 15px
+        &--right::before,
+        &--left::after
+            border-right: 2px solid $color-1
+            border-top: 2px solid $color-1
+            height: 10px
+            position: absolute
+            top: calc(50% + 1px)
+            width: 10px
+        &--left
+            &::before
+                margin-right: 20px
+            &::after
+                left: 30px
+                transform: translateY(-50%) rotate(-135deg)
+            &:hover
+                &::before
+                    transform: translateX(-5px)
+                &::after
+                    transform: translate(-5px, -50%) rotate(-135deg)
+        &--right
+            &::before
+                right: 30px
+                transform: translateY(-50%) rotate(45deg)
+            &::after
+                margin-left: 20px
+            &:hover
+                &::before
+                    transform: translate(5px, -50%) rotate(45deg)
+                &::after
+                    transform: translateX(5px)

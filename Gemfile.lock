@@ -180,7 +180,7 @@ GEM
       sprockets-rails
       tilt
     servolux (0.13.0)
-    sprockets (4.0.0)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -206,13 +206,14 @@ DEPENDENCIES
   middleman-gdpr
   middleman-livereload
   middleman-minify-html
+  middleman-sprockets
   mime-types
   mini_racer
   nokogiri
   rspec
   sass (~> 3.4)
   sass-globbing (~> 1.1)
-  sassc
+  sprockets (~> 3.0)
   tzinfo-data
   wdm (~> 0.1)
 

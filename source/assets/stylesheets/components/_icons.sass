@@ -1,1 +1,49 @@
+.hamburger
+    cursor: pointer
+    display: inline-block
+    height: 2px
+    padding: 10px 0 13px
+    position: relative
+    transition: transform .4s ease-in-out
+    width: 35px
 
+    &::before,
+    &::after,
+    span
+        background-color: $color-1
+        content: ""
+        display: block
+        height: 3px
+        width: 100%
+
+    span
+        transition: opacity 0s ease-in-out .2s
+
+    &::before,
+    &::after
+        position: absolute
+        left: 0
+        transform: translate(0, -50%)
+        transition: top .2s ease-in-out .2s, transform .2s ease-in-out
+
+    &::before
+        top: 0
+
+    &::after
+        top: 100%
+
+    &.active
+        transform: rotate(90deg)
+        span
+            opacity: 0
+
+        &::before,
+        &::after
+            top: 50%
+            transition: top .2s ease-in-out, transform .2s ease-in-out .2s
+
+        &::before
+            transform: translate(0, -50%) rotate(45deg)
+
+        &::after
+            transform: translate(0, -50%) rotate(-45deg)

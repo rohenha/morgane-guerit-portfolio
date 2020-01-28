@@ -1,7 +1,7 @@
 window.morganeGuerit.App = {
     init: function () {
         'use strict';
-        console.log('init App');
+        this.header = window.morganeGuerit.Header.init();
     },
 
     invoke: function () {

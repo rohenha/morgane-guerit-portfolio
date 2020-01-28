@@ -1,0 +1,79 @@
+#footer
+    background-color: $color-1
+    padding: 50px 0
+
+    h4
+        color: $color-6
+        margin-bottom: 20px
+
+    p,
+    a
+        color: $color-6
+
+    .footer
+        &__infos
+            p
+                margin-bottom: 20px
+
+        &__socials
+            text-align: left
+            margin-bottom: 15px
+            ul
+                li
+                    display: inline-block
+                    margin: 0 10px 0 0
+                    vertical-align: middle
+                    &:last-child
+                        border-left: 1px solid $color-6
+                        margin: 0
+                        padding: 0 0 0 10px
+                    a
+                        display: block
+                    img
+                        display: block
+                        max-height: 20px
+                        max-width: 20px
+        &__creator
+            text-align: left
+
+        &__infos,
+        &__links,
+        &__blog
+            margin-bottom: 60px
+
+        &__blog
+            li
+                margin-bottom: 5px
+            p
+                display: inline-block
+                margin-left: 10px
+                padding-left: 10px
+                position: relative
+                &::before
+                    background-color: $color-6
+                    bottom: 0
+                    content: ''
+                    display: block
+                    height: 15px
+                    left: 0
+                    margin: auto
+                    position: absolute
+                    top: 0
+                    width: 1px
+
+    @include media-breakpoint-up(md)
+        .footer
+            &__socials
+                text-align: left
+                margin-bottom: 0
+
+            &__infos,
+            &__links,
+            &__blog
+                margin-bottom: 45px
+
+            &__blog
+                text-align: right
+
+            &__creator
+                text-align: right
