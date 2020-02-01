@@ -4,6 +4,7 @@
     color: $color-1
     cursor: pointer
     display: inline-block
+    font-style: normal
     padding: 10px 30px
     position: relative
     text-decoration: none
@@ -34,6 +35,21 @@
             &::after
                 background-color: $color-2
 
+    &__secondary
+        background-color: $color-2
+        border: 0
+        color: $color-3
+        &.button__arrow--left
+            &::before
+                background-color: $color-3
+            &::after
+                border-color: $color-3
+        &.button__arrow--right
+            &::before
+                border-color: $color-3
+            &::after
+                background-color: $color-3
+
     &__icon
         padding: 15px
         img
@@ -59,7 +75,7 @@
             border-top: 2px solid $color-1
             height: 10px
             position: absolute
-            top: calc(50% + 1px)
+            top: calc(50% + 0px)
             width: 10px
         &--left
             &::before

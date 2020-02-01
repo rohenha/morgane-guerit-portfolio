@@ -1,0 +1,30 @@
+.component_more-article
+    &--image
+        line-height: 0
+        margin-bottom: 20px
+        width: 100%
+        a
+            line-height: 0
+        img
+            width: 100%
+
+    &--content
+        h4
+            margin-bottom: 0
+        ul
+            margin-bottom: 5px
+            li
+                display: inline-block
+                &:not(:last-child)
+                    &::after
+                        content: ","
+
+    &--title
+        margin-bottom: 0
+        text-decoration: none
+
+    @include media-breakpoint-up(md)
+        &--image:hover + .component_more-article--content h4 a,
+        h4:hover a,
+        ul a:hover
+            text-decoration: underline

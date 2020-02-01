@@ -1,0 +1,26 @@
+.page_portfolio
+    &__list
+        column-count: 2
+        column-gap: 0
+        width: 100%
+
+        li
+            line-height: 0
+            list-style: none
+            width: 100%
+
+        img
+            display: inline-block
+            width: 100%
+
+    @include media-breakpoint-up(sm)
+        &__list
+            column-count: 3
+
+    @include media-breakpoint-up(md)
+        &__list
+            column-count: 5
+
+    @include media-breakpoint-up(lg)
+        &__list
+            column-count: 6

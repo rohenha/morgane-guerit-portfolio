@@ -1,0 +1,71 @@
+.component_service
+    position: relative
+    text-align: center
+    width: 100%
+
+    &__image
+        display: none
+        margin-bottom: 30px
+        overflow: hidden
+        position: relative
+        img
+            height: 100%
+            max-width: none
+            position: absolute
+            top: 0
+
+        &--left
+            img
+                left: 0
+        &--right
+            img
+                right: 0
+        &--center
+            img
+                left: 50%
+                transform: translate(-50%, 0)
+
+    ul
+        li
+            display: inline-block
+            &:not(:last-child)
+                p
+                    &::after
+                        background-color: $color-1
+                        border-radius: 10px
+                        content: ""
+                        display: inline-block
+                        height: 7px
+                        margin: 0 10px
+                        width: 7px
+
+    &__content
+        >p,
+        ul
+            margin-bottom: 30px
+
+
+    @include media-breakpoint-up(md)
+        text-align: left
+
+        &__image
+            display: inline-block
+            height: 100%
+            left: inherit
+            margin-bottom: 0
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+
+        &__content
+            padding: 0 20px 0 0
+
+        &--right
+            text-align: right
+            .component_service__image
+                left: 0
+                right: inherit
+
+            .component_service__content
+                padding: 0 0 0 20px

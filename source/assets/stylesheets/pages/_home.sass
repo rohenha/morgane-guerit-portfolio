@@ -1,0 +1,81 @@
+.page_home
+
+    &__portfolio
+        overflow: hidden
+        position: relative
+        width: 100%
+
+        &::before
+            background-color: $color-1
+            content: ""
+            display: block
+            height: 100%
+            left: 0
+            opacity: .9
+            position: absolute
+            top: 0
+            width: 100%
+            z-index: 2
+
+        .container
+            position: relative
+            z-index: 3
+
+        p
+            color: $color-3
+
+        &--list
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
+            z-index: 1
+
+        .page_portfolio__list
+            column-count: 4
+
+
+    &__blog
+        &--title
+            align-items: center
+            display: flex
+            flex-flow: row
+            justify-content: space-between
+            margin-bottom: 30px
+
+            h2
+                margin-bottom: 0
+
+        &--articles
+            margin-top: 30px
+
+        .component_more-article
+            &:not(:last-child)
+                margin-bottom: 30px
+
+    @include media-breakpoint-up(sm)
+        .page_portfolio__list
+            column-count: 4
+
+    @include media-breakpoint-up(md)
+        .page_portfolio__list
+            column-count: 5
+
+        .component_more-article
+            padding: 0 5px
+            &:not(:last-child)
+                margin-bottom: 0
+            &:first-of-type
+                padding: 0 10px 0 0
+            &:last-of-type
+                padding: 0 0 0 10px
+
+        &__blog
+            padding: 100px 0
+            &--articles
+                margin-top: 60px
+
+    @include media-breakpoint-up(lg)
+        .page_portfolio__list
+            column-count: 5

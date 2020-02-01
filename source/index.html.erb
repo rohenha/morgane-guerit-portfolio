@@ -2,14 +2,125 @@
 title: Morgane Guérit Portfolio
 ---
 
-<section class="cover">
-  <%= image_tag 'ressources/cover.jpg', alt: 'cover', class: 'cover__bg' %>
-  <div class="container cover__content">
-    <div class="row">
-      <div class="col-md-5">
-        <h1 class="cover__title">Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div class="page_home">
+
+  <section class="component_cover section js-section" style="background-image: url(<%= image_path("ressources/cover.jpg") %>);">
+    <div class="container component_cover__content">
+      <div class="row">
+        <div class="col-md-5">
+          <h1>Lorem Ipsum</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="icon__scroller"></div>
+  </section>
+
+
+  <section class="component_service component_service--right section section__screen-height js-section">
+    <div class="container">
+      <div class="row">
+        <div class="component_service__image component_service__image--left col-md-6">
+          <%= image_tag 'ressources/services/photo-1.jpg', alt: 'cover' %>
+        </div>
+        <div class="component_service__content col-md-6 offset-md-6">
+          <h2>Mes services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <ul>
+            <li><p class="text__email">Photographie</p></li>
+            <li><p class="text__email">Réseaux sociaux</p></li>
+            <li><p class="text__email">Blogging</p></li>
+          </ul>
+          <a class="button button__secondary button__arrow button__arrow--right" href="#">Voir mes services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page_home__portfolio section section__screen-height js-section">
+    <div class="page_home__portfolio--list">
+      <ul class="page_portfolio__list">
+        <li><%= image_tag 'ressources/portfolio/photo-1.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-2.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-3.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-4.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-5.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-3.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-1.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-2.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-1.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-5.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-4.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-2.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-3.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-4.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-5.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-1.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-2.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-4.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-2.jpg', alt: 'cover' %></li>
+        <li><%= image_tag 'ressources/portfolio/photo-5.jpg', alt: 'cover' %></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h2>Portfolio</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a class="button button__secondary button__arrow button__arrow--right" href="#">Aller au portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="page_home__blog section js-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 page_home__blog--title">
+          <h2>blog</h2>
+          <a class="button button__secondary button__arrow button__arrow--right" href="#">Aller au blog</a>
+        </div>
+        <div class="col-md-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <ul class="row page_home__blog--articles">
+        <li class="component_more-article col-md-4">
+          <div class="component_more-article--image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+          <div class="component_more-article--content">
+            <h4><a href="#" class="component_more-article--title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+          </div>
+        </li>
+        <li class="component_more-article col-md-4">
+          <div class="component_more-article--image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+          <div class="component_more-article--content">
+            <h4><a href="#" class="component_more-article--title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+          </div>
+        </li>
+        <li class="component_more-article col-md-4">
+          <div class="component_more-article--image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+          <div class="component_more-article--content">
+            <h4><a href="#" class="component_more-article--title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</div>

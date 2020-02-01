@@ -7,13 +7,16 @@ h1,
 h2
     color: $color-2
     font-family: $font-title
-    // line-height: px2rem(90)
 
-h1
+h1,
+.component_loader h4,
+.component_loader h4 span
     font-size: px2rem(70)
+    margin-bottom: 50px
 
 h2
     font-size: px2rem(50)
+    margin-bottom: 30px
 
 h3
     color: $color-2
@@ -22,13 +25,16 @@ h3
     text-transform: uppercase
 
 h4,
-h5
+h5,
+.component_more-article--title
     font-size: px2rem(20)
 
-h4
+h4,
+.component_more-article--title
     color: $color-1
     font-weight: bold
     line-height: px2rem(20)
+    margin-bottom: 20px
 
 h5
     text-transform: uppercase
@@ -43,6 +49,13 @@ span
     line-height: px2rem(22)
 
 
+p,
+ul,
+a
+    &:not(:last-child)
+        margin-bottom: 30px
+
+
 a
     color: $color-1
     display: inline-block
@@ -51,14 +64,21 @@ a
 .text
     &__date,
     &__category
+        color: $color-5
         font-size: px2rem(14)
         font-style: italic
         line-height: px2rem(17)
+        text-decoration: none
+
+    &__testimony
+        font-size: px2rem(22)
+        text-transform: uppercase
 
     &__gold
         color: $color-2
 
     &__date
+        font-style: normal
         font-weight: bold
 
     &__email
@@ -72,6 +92,8 @@ a
     color: $color-2
     font-family: $font-title
     font-size: px2rem(30)
+    font-style: normal
+    font-weight: normal
     text-decoration: none
     span
         color: $color-1
