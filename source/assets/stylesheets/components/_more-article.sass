@@ -1,5 +1,5 @@
 .component-more-article
-    &--image
+    &__image
         line-height: 0
         margin-bottom: 20px
         width: 100%
@@ -8,7 +8,7 @@
         img
             width: 100%
 
-    &--content
+    &__content
         h4
             margin-bottom: 0
         ul
@@ -19,12 +19,36 @@
                     &::after
                         content: ","
 
-    &--title
+    &__title
         margin-bottom: 0
         text-decoration: none
 
+    &__container
+        margin-top: 150px
+        h2
+            text-align: center
+
+    &__list
+        li
+            &:not(:last-child)
+                margin-bottom: 30px
+
     @include media-breakpoint-up(md)
-        &--image:hover + .component-more-article--content h4 a,
+        &__image:hover + .component-more-article__content h4 a,
         h4:hover a,
         ul a:hover
             text-decoration: underline
+
+        &__container
+            h2
+                text-align: left
+
+        &__list
+            li
+                padding: 0 5px
+                &:not(:last-child)
+                    margin-bottom: 0
+                &:first-of-type
+                    padding: 0 10px 0 0
+                &:last-of-type
+                    padding: 0 0 0 10px

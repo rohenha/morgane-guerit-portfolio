@@ -1,7 +1,16 @@
 .page-services
     .component-cover,
-    .component-confiance
+    .component-confiance,
+    .page-services__testimony
         margin-bottom: 100px
+
+    &__testimony
+        h2
+            text-align: center
+
+        &--single
+            &:not(:last-child)
+                margin-bottom: 30px
 
     @include media-breakpoint-down(md)
         .component-service
@@ -13,3 +22,12 @@
 
         .component-service
             height: 75vh
+
+        &__testimony
+            &--single
+                &:first-child
+                    padding: 0 10px 0 0
+                &:last-child
+                    padding: 0 0 0 10px
+                &:not(:last-child)
+                    margin-bottom: 0px

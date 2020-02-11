@@ -1,0 +1,45 @@
+.page-contact
+    text-align: center
+    padding: 100px 0
+    overflow: hidden
+    position: relative
+    width: 100%
+
+    &::before,
+    &::after
+        background-color: rgba($color-1, .2)
+        content: ""
+        display: block
+        height: 120%
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%) rotate(10deg)
+        width: 50px
+
+    &::before
+        box-shadow: 40px 0 0 0 rgba($color-1, .1)
+        left: -60px
+
+    &::after
+        box-shadow: -40px 0 0 0 rgba($color-1, .1)
+        right: -60px
+
+    ul
+        li
+            display: inline-block
+
+            &:not(:last-child)
+                margin-right: 10px
+
+    @include media-breakpoint-up(md)
+        &::before,
+        &::after
+            width: 100px
+
+        &::before
+            box-shadow: 100px 0 0 0 rgba($color-1, .1)
+            left: -70px
+
+        &::after
+            box-shadow: -100px 0 0 0 rgba($color-1, .1)
+            right: -70px

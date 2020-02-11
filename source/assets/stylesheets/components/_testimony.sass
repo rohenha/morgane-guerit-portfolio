@@ -1,0 +1,33 @@
+.component-testimony
+    border: 1px solid rgba($color-1, .2)
+    padding: 20px
+
+    &__person
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        &--img
+            border: 1px solid $color-2
+            display: inline-block
+            font-size: 0
+            width: calc(100% / 3)
+        &--title
+            padding: 0 0 0 20px
+            display: inline-block
+            width: calc(100% / 3 * 2)
+
+        h4
+            margin-bottom: 10px
+
+        p
+            color: $color-1
+
+    &__content
+        margin-top: 30px
+
+    &:not(:last-child)
+        margin-bottom: 30px
+
+    @include media-breakpoint-up(md)
+        &:not(:last-child)
+            margin-bottom: 0px
