@@ -1,26 +1,110 @@
 .page-portfolio
-    &__list
-        column-count: 2
-        column-gap: 0
+    h1
+        display: none
+    .component-portfolio__list
+        li
+            background-color: $color-1
+            cursor: default
+            pointer-events: none
+            position: relative
+            transition: transform .3s ease-in-out, z-index .1s ease-in-out .3s
+            z-index: 1
+            &.active
+                cursor: pointer
+                pointer-events: auto
+
+                img
+                    opacity: .8
+
+                &:hover
+                    transform: scale(1.08)
+                    z-index: 3
+                    transition: transform .3s ease-in-out .1s, z-index .1s ease-in-out
+
+            img
+                opacity: .1
+                transition: opacity .3s ease-in-out
+
+
+
+            .caption
+                display: none
+
+    &__filter
+        align-items: center
+        background-color: rgba($color-1, .8)
+        display: flex
+        flex-flow: column wrap
+        height: 100%
+        justify-content: center
+        left: 0
+        opacity: 0
+        padding: 40px
+        position: fixed
+        top: 0
+        transition: opacity .3s ease-in-out, visibility .1s ease-in-out .3s
+        visibility: hidden
         width: 100%
+        z-index: 4
+
+        text-align: center
+
+        h2
+            margin-bottom: 50px
 
         li
-            line-height: 0
-            list-style: none
-            width: 100%
+            margin: 0 0 10px 0
 
-        img
-            display: inline-block
-            width: 100%
+            &:last-child
+                margin: 50px 0 0
 
-    @include media-breakpoint-up(sm)
-        &__list
-            column-count: 3
+            button
+                background: rgba($color-6, 0)
+                border: none
+                color: $color-6
+                cursor: pointer
 
-    @include media-breakpoint-up(md)
-        &__list
-            column-count: 5
+                &:hover,
+                &:focus
+                    color: lighten($color-2, 10%)
 
-    @include media-breakpoint-up(lg)
-        &__list
-            column-count: 6
+            &.active
+                button
+                    color: $color-2
+
+                    &:hover,
+                    &:focus
+                        color: $color-2
+
+
+        &.active
+            opacity: 1
+            transition: opacity .3s ease-in-out .1s, visibility .1s ease-in-out
+            visibility: visible
+
+    .button
+        background-color: $color-6
+        bottom: 40px
+        color: $color-1
+        position: fixed
+        left: 50%
+        transform: translate(-50%, 0)
+        z-index: 5
+
+        .close
+            display: none
+
+        &.selected
+            background-color: $color-2
+            border: 0
+            color: $color-6
+
+            &:hover,
+            &:focus
+                background-color: darken($color-2, 5%)
+
+        &.open
+            .close
+                display: block
+            .filters
+                display: none

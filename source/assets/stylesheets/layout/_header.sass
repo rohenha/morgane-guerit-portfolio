@@ -103,3 +103,18 @@
                         &:before
                             opacity: 0.2
                             transform: translate(0, 0)
+        &.white
+            a,
+            span
+                color: $color-6
+
+            .button__arrow--right
+                &::before
+                    border-color: $color-6
+                &::after
+                    background-color: $color-6
+
+            li
+                &::before,
+                &:last-child::before
+                    background-color: $color-6

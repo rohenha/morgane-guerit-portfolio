@@ -1,8 +1,10 @@
 // This is where it all goes :)
 
 //= require_self
-//= require_tree ./vendors
+//= require siema/dist/siema.min
+//= require lightgallery.js/dist/js/lightgallery.min
 //= require_tree ./components
+//= require_tree ./pages
 //= require app
 
 window.morganeGuerit = {};

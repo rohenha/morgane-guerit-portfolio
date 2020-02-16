@@ -5,3 +5,4 @@
 build/
 data/morganeguerit
 .tmp/
+node_modules/

@@ -8,10 +8,12 @@
     padding: 10px 30px
     position: relative
     text-decoration: none
-    transition: border-color .2s ease-in-out
+    transition: border-color .2s ease-in-out, background-color .2s ease-in-out
 
-    &:hover
+    &:hover,
+    &:focus
         border-color: rgba($color-1, .6)
+        outline: none
 
     &__borderless
         border: 0px
@@ -35,6 +37,8 @@
             &::after
                 background-color: $color-2
 
+
+
     &__secondary
         background-color: $color-2
         border: 0
@@ -49,6 +53,10 @@
                 border-color: $color-3
             &::after
                 background-color: $color-3
+
+        &:hover,
+        &:focus
+            background-color: darken($color-2, 5%)
 
     &__icon
         height: 40px
