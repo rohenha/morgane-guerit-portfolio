@@ -31,6 +31,7 @@ window.morganeGuerit.Portfolio = {
         };
         this.bindEvents();
         this.setCategory(this.categories[this.categories.length - 1], false);
+        return null;
     },
 
     invoke: function () {
@@ -73,7 +74,6 @@ window.morganeGuerit.Portfolio = {
             elements = this.container.querySelectorAll(selector),
             single,
             category,
-            gallery,
             array = [],
             length = elements.length;
 
@@ -85,13 +85,12 @@ window.morganeGuerit.Portfolio = {
                 el: single
             });
             if (isCategory && category !== '') {
-                gallery = lightGallery(this.gallery, {
+                lightGallery(this.container.querySelector('.gallery__' + category), {
                     download: false,
                     galleryId: i,
                     mode: 'lg-slide',
                     selector: '.' + category
                 });
-                console.log(gallery);
             }
         }
         return array;
