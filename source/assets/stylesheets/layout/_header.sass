@@ -1,5 +1,4 @@
 #header
-    // background-color: $color-6
     padding: 20px 0
     position: fixed
     width: 100%
@@ -103,6 +102,10 @@
                         &:before
                             opacity: 0.2
                             transform: translate(0, 0)
+
+        &.bg
+            background-color: $color-6
+
         &.white
             a,
             span
@@ -118,3 +121,6 @@
                 &::before,
                 &:last-child::before
                     background-color: $color-6
+
+            &.bg
+                background-color: $color-1

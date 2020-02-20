@@ -3,6 +3,7 @@ window.morganeGuerit.App = {
         'use strict';
         this.header = window.morganeGuerit.Header.init();
         this.portfolio = window.morganeGuerit.Portfolio.init();
+        this.sliders = window.morganeGuerit.Sliders.init();
     },
 
     invoke: function () {

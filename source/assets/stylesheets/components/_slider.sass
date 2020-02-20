@@ -1,0 +1,21 @@
+.component-slider
+    &__container
+        position: relative
+    &__button
+        background-color: rgba($color-6, .7)
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: 50%
+        font-size: 0
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        z-index: 2
+
+        &--next
+            background-image: url("../images/icons/arrow-right.svg")
+            right: 10px
+
+        &--previous
+            background-image: url("../images/icons/arrow-left.svg")
+            left: 10px

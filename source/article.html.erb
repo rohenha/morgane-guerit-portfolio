@@ -12,7 +12,7 @@ title: Article | Morgane Guerit
       <div class="page-article__cover">
         <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
       </div>
-      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="col-10 offset-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -20,10 +20,24 @@ title: Article | Morgane Guerit
           <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
           <p class="text__category">Citation de la photo</p>
         </div>
+
+        <div class="page-article__double-image">
+          <div class="page-article__image">
+            <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+            <p class="text__category">Citation de la photo</p>
+          </div>
+          <div class="page-article__image">
+            <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+            <p class="text__category">Citation de la photo</p>
+          </div>
+        </div>
         <h3>Lorem ipsum dolor sit amet</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="page-article__gallery">
-          <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+        <div class="page-article__gallery component-slider__container js-slider" data-arrows="true">
+          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
+          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
+          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
+          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
         </div>
       </div>
       <div class="component-share col-md-12 col-lg-10 offset-lg-1">

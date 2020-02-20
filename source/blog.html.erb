@@ -2,20 +2,100 @@
 title: Blog | Morgane Guerit
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" class="middleman-logo" aria-labelledby="middleman-logo__title" role="img">
-  <title id="middleman-logo__title">Middleman</title>
-  <path class="middleman-logo__top-left-bar" fill-opacity=".45" d="M0 40L200 0v30L0 60z"/>
-  <path class="middleman-logo__top-right-bar" fill="#fff" d="M200 0l200 40v20L200 30z"/>
-  <path class="middleman-logo__left-m" fill-opacity=".45" d="M0 78v184l45 5V152l45 83 47-83v129l53 7V52l-57 8-43 83-43-70z"/>
-  <path class="middleman-logo__right-m" fill="#fff" d="M400 78v184l-45 5V152l-45 83-47-83v129l-53 7V52l57 8 43 83 43-70z"/>
-  <path class="middleman-logo__bottom-left-bar" fill-opacity=".45" d="M0 300l200 40v-30L0 280z"/>
-  <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
-</svg>
+<div class="page-blog">
+  <div class="container">
+    <div class="row">
+      
+      <div class="page-blog__title col">
+        <h1>Le blog</h1>
+        <div class="page-blog__slider component-slider__container js-slider" data-arrows="true">
+          <div class="component-more-article__content js-slide">
+            <div class="page-blog__slider--image">
+              <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+            </div>
+            <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+            <div class="page-blog__slider--text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua …</p>
+              <a href="#" class="button">Lire la suite</a>
+            </div>
+          </div>
+          <div class="component-more-article__content js-slide">
+            <div class="page-blog__slider--image">
+              <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+            </div>
+            <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+            <div class="page-blog__slider--text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua …</p>
+              <a href="#" class="button">Lire la suite</a>
+            </div>
+          </div>
+          <div class="component-more-article__content js-slide">
+            <div class="page-blog__slider--image">
+              <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
+            </div>
+            <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+            <ul>
+              <li><a href="#" class="text__category">Catégorie 1</a></li>
+              <li><a href="#" class="text__category">Catégorie 2</a></li>
+            </ul>
+            <p class="text__date">Le 12 Octobre 2019</p>
+            <div class="page-blog__slider--text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua …</p>
+              <a href="#" class="button">Lire la suite</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<h1>Blog | Morgane Guerit</h1>
+      <div class="component-more-article__container">
+        <h2>Plus d'articles</h2>
+        <ul class="row component-more-article__list">
+          <li class="component-more-article col-8 offset-2 col-md-4 offset-md-0">
+            <div class="component-more-article__image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+            <div class="component-more-article__content">
+              <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+              <ul>
+                <li><a href="#" class="text__category">Catégorie 1</a></li>
+                <li><a href="#" class="text__category">Catégorie 2</a></li>
+              </ul>
+              <p class="text__date">Le 12 Octobre 2019</p>
+            </div>
+          </li>
+          <li class="component-more-article col-8 offset-2 col-md-4 offset-md-0">
+            <div class="component-more-article__image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+            <div class="component-more-article__content">
+              <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+              <ul>
+                <li><a href="#" class="text__category">Catégorie 1</a></li>
+                <li><a href="#" class="text__category">Catégorie 2</a></li>
+              </ul>
+              <p class="text__date">Le 12 Octobre 2019</p>
+            </div>
+          </li>
+          <li class="component-more-article col-8 offset-2 col-md-4 offset-md-0">
+            <div class="component-more-article__image"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+            <div class="component-more-article__content">
+              <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+              <ul>
+                <li><a href="#" class="text__category">Catégorie 1</a></li>
+                <li><a href="#" class="text__category">Catégorie 2</a></li>
+              </ul>
+              <p class="text__date">Le 12 Octobre 2019</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-<%= link_to(
-  "Read Documentation",
-  "https://middlemanapp.com/basics/templating_language/",
-  target: "_blank"
-) %>
+    </div>
+  </div>
+</div>
