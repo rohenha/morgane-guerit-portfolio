@@ -1,0 +1,41 @@
+.page-error
+    align-items: center
+    background-color: $color-3
+    display: flex
+    flex-flow: column wrap
+    justify-content: center
+    position: relative
+    z-index: 1
+
+    &::before,
+    &::after
+        background-color: rgba($color-1, .2)
+        content: ""
+        display: block
+        height: 120%
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%) rotate(10deg)
+        width: 50px
+
+    &::before
+        box-shadow: 40px 0 0 0 rgba($color-1, .1)
+        left: -60px
+
+    &::after
+        box-shadow: -40px 0 0 0 rgba($color-1, .1)
+        right: -60px
+
+    .logo
+        left: 0
+        margin-bottom: 70px
+        position: relative
+        top: 0
+        transform: translate(0, 0)
+
+        span
+            color: $color-1
+
+    p,
+    a
+        color: $color-1

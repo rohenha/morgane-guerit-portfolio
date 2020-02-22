@@ -4,9 +4,7 @@ title: Blog | Morgane Guerit
 
 <div class="page-blog">
   <div class="container">
-    <div class="row">
-      
-      <div class="page-blog__title col">
+      <div class="page-blog__title">
         <h1>Le blog</h1>
         <div class="page-blog__slider component-slider__container js-slider" data-arrows="true">
           <div class="component-more-article__content js-slide">
@@ -57,7 +55,78 @@ title: Blog | Morgane Guerit
         </div>
       </div>
 
-      <div class="component-more-article__container">
+      <hr/>
+
+      <div class="row">
+        <div class="page-blog__articles col-md-8">
+          <ul class="page-blog__list">
+            <li class="component-more-article row">
+              <div class="component-more-article__image col-md-4"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+              <div class="component-more-article__content col-md-8">
+                <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+                <ul>
+                  <li><a href="#" class="text__category">Catégorie 1</a></li>
+                  <li><a href="#" class="text__category">Catégorie 2</a></li>
+                </ul>
+                <p class="text__date">Le 12 Octobre 2019</p>
+                <a href="#" class="button">Lire la suite</a>
+              </div>
+            </li>
+            <li class="component-more-article row">
+              <div class="component-more-article__image col-md-4"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+              <div class="component-more-article__content col-md-8">
+                <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet</a></h4>
+                <ul>
+                  <li><a href="#" class="text__category">Catégorie 1</a></li>
+                  <li><a href="#" class="text__category">Catégorie 2</a></li>
+                </ul>
+                <p class="text__date">Le 12 Octobre 2019</p>
+                <a href="#" class="button">Lire la suite</a>
+              </div>
+            </li>
+            <li class="component-more-article row">
+              <div class="component-more-article__image col-md-4"><a href="#"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></a></div>
+              <div class="component-more-article__content col-md-8">
+                <h4><a href="#" class="component-more-article__title">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</a></h4>
+                <ul>
+                  <li><a href="#" class="text__category">Catégorie 1</a></li>
+                  <li><a href="#" class="text__category">Catégorie 2</a></li>
+                </ul>
+                <p class="text__date">Le 12 Octobre 2019</p>
+                <a href="#" class="button">Lire la suite</a>
+              </div>
+            </li>
+          </ul>
+          <div class="page-blog__articles--navigation">
+            <a href="#" class="button button__arrow button__arrow--left">Anciens articles</a>
+            <a href="#" class="button button__arrow button__arrow--right">Nouveaux articles</a>
+          </div>
+        </div>
+
+        <div class="page-blog__separator col-md-1"><hr/></div>
+
+        <div class="page-blog__breadcrumb col-md-3">
+          <h2>Catégories</h2>
+          <ul>
+            <li><a class="page-blog__breadcrumb--link" href="#">Sport</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">Multimédia</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">Réseaux Sociaux</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">Blogging</a></li>
+          </ul>
+
+          <hr>
+
+          <h2>Années</h2>
+          <ul>
+            <li><a class="page-blog__breadcrumb--link" href="#">2017</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">2018</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">2019</a></li>
+            <li><a class="page-blog__breadcrumb--link" href="#">2020</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <div class="component-more-article__container">
         <h2>Plus d'articles</h2>
         <ul class="row component-more-article__list">
           <li class="component-more-article col-8 offset-2 col-md-4 offset-md-0">
@@ -94,8 +163,6 @@ title: Blog | Morgane Guerit
             </div>
           </li>
         </ul>
-      </div>
-
-    </div>
+      </div> -->
   </div>
 </div>

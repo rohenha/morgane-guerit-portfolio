@@ -6,7 +6,7 @@
 
     &__slider
         &--image
-            height: 400px
+            height: 200px
             margin-bottom: 10px
             overflow: hidden
             position: relative
@@ -20,14 +20,7 @@
                 width: 100%
 
         &--text
-            align-items: center
-            display: flex
-            flex-flow: row wrap
-            justify-content: space-between
-            p
-                margin-bottom: 0
-                text-align: left
-                width: 50%
+            text-align: left
 
         h4,
         .text__date,
@@ -41,10 +34,84 @@
             padding: 0 10px
 
         .component-slider__button
-            top: 200px
+            top: 100px
 
             &--next
                 right: 20px
 
             &--previous
                 left: 20px
+
+    &__articles
+        >ul
+            margin-bottom: 100px
+        .component-more-article
+            &:not(:last-child)
+                margin: 0 0 30px 0
+
+            &__content
+                .text__date
+                    margin-bottom: 20px
+
+        &--navigation
+            align-items: center
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+
+    &__separator
+        margin: 80px 0
+
+    &__breadcrumb
+        text-align: center
+        li
+            &:not(:last-child)
+                margin-bottom: 10px
+
+    @include media-breakpoint-up(md)
+        &__slider
+            &--image
+                height: 400px
+
+            .component-slider__button
+                top: 200px
+
+            &--text
+                justify-content: space-between
+                p
+                    margin-bottom: 0
+                    width: 50%
+
+
+        &__articles
+            .component-more-article
+                &__image
+                    margin-bottom: 0
+                    position: relative
+                    a
+                        height: 100%
+                        left: 0
+                        position: absolute
+                        top: 0
+                        width: 100%
+                        img
+                            height: 100%
+                            object-fit: cover
+                            width: 100%
+                &__content
+                    padding-left: 20px
+
+            &--navigation
+                align-items: center
+                display: flex
+                flex-flow: row wrap
+                justify-content: space-between
+
+                a
+                    margin-bottom: 0
+
+        &__separator
+            hr
+                height: 100%
+                margin: 0 auto
+                width: 1px

@@ -10,7 +10,11 @@ h2
 
 h1,
 .component-loader h4,
-.component-loader h4 span
+.component-loader h4 span,
+.page-error h1,
+.page-error h1 span,
+.soon h1,
+.soon h1 span,
     font-size: px2rem(70)
     margin-bottom: 50px
 
@@ -36,8 +40,18 @@ h4,
     line-height: px2rem(20)
     margin-bottom: 20px
 
-h5
+h5,
+.page-blog__breadcrumb--link
     text-transform: uppercase
+
+.page-blog__breadcrumb--link
+    color: $color-5
+    font-style: normal
+    text-decoration: none
+
+    &:hover,
+    &:focus
+        text-decoration: underline
 
 a,
 p,
@@ -71,6 +85,11 @@ a
         line-height: px2rem(17)
         text-decoration: none
 
+    &__category
+        &:hover,
+        &:focus
+            text-decoration: underline
+
     &__testimony
         font-size: px2rem(22)
         text-transform: uppercase
@@ -100,3 +119,14 @@ a
         color: $color-1
         font-family: $font-title
         font-size: px2rem(30)
+
+#header nav ul li a
+    font-size: px2rem(20)
+    font-weight: bold
+    text-transform: uppercase
+
+@include media-breakpoint-up(md)
+    #header nav ul li a
+        font-size: px2rem($font-size-base)
+        font-weight: normal
+        text-transform: inherit
