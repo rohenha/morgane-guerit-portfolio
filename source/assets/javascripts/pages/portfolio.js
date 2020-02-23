@@ -106,7 +106,7 @@ window.morganeGuerit.Portfolio = {
         this.filtersOpened = !this.filtersOpened;
         state = this.filtersOpened ? 'add' : 'remove';
         this.filters.classList[state]('active');
-        this.btn.classList[state]('open');
+        this.btn.classList[state]('active');
     }
 
 }.invoke();

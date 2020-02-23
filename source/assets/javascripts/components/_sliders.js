@@ -8,6 +8,7 @@ window.morganeGuerit.Sliders = {
             return null;
         }
         this.setSliders();
+        return null;
     },
 
     invoke: function () {
