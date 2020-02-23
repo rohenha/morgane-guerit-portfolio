@@ -55,6 +55,7 @@ window.morganeGuerit.Slider.prototype.bindEvents = function () {
     }
     this.nextBtn.addEventListener('click', this.changeSliderState.bind(this, true));
     this.prevBtn.addEventListener('click', this.changeSliderState.bind(this, false));
+    return null;
 };
 
 window.morganeGuerit.Slider.prototype.changeSliderState = function (state) {

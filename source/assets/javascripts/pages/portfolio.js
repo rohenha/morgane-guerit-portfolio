@@ -46,7 +46,6 @@ window.morganeGuerit.Portfolio = {
         var i = 0,
             image,
             categoryClass = category.category,
-            categoryActive = categoryClass !== '' ? 'add' : 'remove',
             length = this.images.length;
 
         for (i; i < length; i += 1) {
@@ -56,16 +55,7 @@ window.morganeGuerit.Portfolio = {
                 image.el.classList.add('active');
             }
         }
-
-        if (this.current.category !== null) {
-            this.current.category.el.classList.remove('active');
-        }
-        category.el.classList.add('active');
-        this.current.category = category;
-        if (toggleFilters) {
-            this.toggleFilters();
-        }
-        this.btn.classList[categoryActive]('selected');
+        this.setFilters(category, categoryClass, toggleFilters);
     },
 
     setElements: function (selector, isCategory) {
@@ -94,6 +84,20 @@ window.morganeGuerit.Portfolio = {
             }
         }
         return array;
+    },
+
+    setFilters: function (category, categoryClass, toggleFilters) {
+        'use strict';
+        var categoryActive = categoryClass !== '' ? 'add' : 'remove';
+        if (this.current.category !== null) {
+            this.current.category.el.classList.remove('active');
+        }
+        category.el.classList.add('active');
+        this.current.category = category;
+        if (toggleFilters) {
+            this.toggleFilters();
+        }
+        this.btn.classList[categoryActive]('selected');
     },
 
     toggleFilters: function () {
