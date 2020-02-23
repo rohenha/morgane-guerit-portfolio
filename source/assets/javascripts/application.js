@@ -5,7 +5,7 @@
 //= require lightgallery.js/dist/js/lightgallery.min
 //= require_tree ./components
 //= require_tree ./pages
-//= require app
+//= require _app
 
 window.morganeGuerit = {};
 
