@@ -5,7 +5,8 @@ window.morganeGuerit.App = {
         'use strict';
         this.header = window.morganeGuerit.Header.init(this.toggleElements.bind(this));
         this.portfolio = window.morganeGuerit.Portfolio.init(this.toggleElements.bind(this));
-        this.sliders = window.morganeGuerit.Sliders.init();
+        this.sliders = window.morganeGuerit.Sliders.init('.js-slider', '.js-slide');
+        this.galleries = window.morganeGuerit.Sliders.init('.js-slider', '.js-slide');
     },
 
     invoke: function () {

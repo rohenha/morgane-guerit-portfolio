@@ -1,8 +1,8 @@
 /* global Siema */
-window.morganeGuerit.Slider = function Slider (container, hasArrows) {
+window.morganeGuerit.Slider = function Slider (container, hasArrows, items) {
     'use strict';
     this.container = container;
-    this.content = this.container.querySelectorAll('.js-slide');
+    this.content = this.container.querySelectorAll(items);
     this.hasArrows = hasArrows;
     this.isSingleSlide = this.container.querySelectorAll('.siema > div').length <= 1;
     this.init();

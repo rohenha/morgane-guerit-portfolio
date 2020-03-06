@@ -1,9 +1,10 @@
 window.morganeGuerit.Sliders = {
 
-    init: function () {
+    init: function (container, items) {
         'use strict';
-        this.containers = document.querySelectorAll('.js-slider');
+        this.containers = document.querySelectorAll(container);
         this.sliders = [];
+        this.items = items;
         if (!this.containers) {
             return null;
         }
@@ -26,7 +27,7 @@ window.morganeGuerit.Sliders = {
 
         for (i; i < length; i += 1) {
             container = this.containers[i];
-            this.sliders.push(new window.morganeGuerit.Slider(container, container.dataset.arrows === 'true'));
+            this.sliders.push(new window.morganeGuerit.Slider(container, container.dataset.arrows === 'true', this.items));
         }
     }
 }.invoke();

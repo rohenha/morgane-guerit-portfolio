@@ -11,7 +11,9 @@ window.morganeGuerit.Portfolio = {
             category = this.categories[i];
             category.el.addEventListener('click', this.setCategory.bind(this, category, true));
         }
-        this.btn.addEventListener('click', this.toggleFilters.bind(this));
+        if (this.btn) {
+            this.btn.addEventListener('click', this.toggleFilters.bind(this));
+        }
     },
 
     init: function () {
@@ -29,6 +31,7 @@ window.morganeGuerit.Portfolio = {
         this.current = {
             category: null
         };
+        this.randomizeElements();
         this.bindEvents();
         this.setCategory(this.categories[this.categories.length - 1], false);
         return null;
@@ -41,11 +44,19 @@ window.morganeGuerit.Portfolio = {
         };
     },
 
+    randomizeElements: function () {
+        'use strict';
+        var i = this.images.length;
+        for (i; i >= 0; i -= 1) {
+            this.gallery.appendChild(this.images[Math.random() * i | 0].el);
+        }
+    },
+
     setCategory: function (category, toggleFilters) {
         'use strict';
         var i = 0,
             image,
-            categoryClass = category.category,
+            categoryClass = this.categories.length > 0 ? category.category : '',
             length = this.images.length;
 
         for (i; i < length; i += 1) {
@@ -55,7 +66,9 @@ window.morganeGuerit.Portfolio = {
                 image.el.classList.add('active');
             }
         }
-        this.setFilters(category, categoryClass, toggleFilters);
+        if (this.categories.length > 0) {
+            this.setFilters(category, categoryClass, toggleFilters);
+        }
     },
 
     setElements: function (selector, isCategory) {
@@ -97,7 +110,9 @@ window.morganeGuerit.Portfolio = {
         if (toggleFilters) {
             this.toggleFilters();
         }
-        this.btn.classList[categoryActive]('selected');
+        if (this.btn) {
+            this.btn.classList[categoryActive]('selected');
+        }
     },
 
     toggleFilters: function () {
