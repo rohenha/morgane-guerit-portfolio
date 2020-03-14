@@ -68,7 +68,12 @@ button
 
 p,
 ul,
-a
+a,
+blockquote,
+.wp-block-file,
+.wp-block-gallery,
+.wp-block-table,
+.wp-block-media-text
     &:not(:last-child)
         margin-bottom: 30px
 
@@ -126,6 +131,13 @@ a
     font-size: px2rem(20)
     font-weight: bold
     text-transform: uppercase
+
+#footer
+    h4
+        font-size: px2rem(17)
+    p,
+    a:not(.text__email)
+        font-size: px2rem(13)
 
 @include media-breakpoint-up(md)
     #header nav ul li a

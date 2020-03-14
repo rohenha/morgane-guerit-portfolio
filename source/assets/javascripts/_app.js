@@ -6,7 +6,7 @@ window.morganeGuerit.App = {
         this.header = window.morganeGuerit.Header.init(this.toggleElements.bind(this));
         this.portfolio = window.morganeGuerit.Portfolio.init(this.toggleElements.bind(this));
         this.sliders = window.morganeGuerit.Sliders.init('.js-slider', '.js-slide');
-        this.galleries = window.morganeGuerit.Sliders.init('.js-slider', '.js-slide');
+        this.article = window.morganeGuerit.Article.init();
     },
 
     invoke: function () {

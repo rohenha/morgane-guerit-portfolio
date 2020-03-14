@@ -4,7 +4,15 @@
     padding: 50px
 
     ul
+        text-align: center
         li
             display: inline-block
             &:not(:last-child)
-                margin-right: 20px
+                margin: 0 0 20px 0
+
+    @include media-breakpoint-up(md)
+        ul
+            text-align: left
+            li
+                &:not(:last-child)
+                    margin: 0 20px 0 0

@@ -2,7 +2,7 @@
 title: Article | Morgane Guerit
 ---
 
-<div class="page-article">
+<div class="page-article js-article">
   <div class="page-article__backdrop"></div>
   <div class="container">
     <div class="row">
@@ -13,7 +13,7 @@ title: Article | Morgane Guerit
       <div class="page-article__cover">
         <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
       </div>
-      <div class="col-10 offset-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="page-article__content col-10 offset-1 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <p>Bienvenue sur WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis commencez à écrire&nbsp;!</p>
         <figure class="wp-block-image size-large">
           <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
@@ -54,33 +54,26 @@ title: Article | Morgane Guerit
           </ul>
         </figure>
 
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-        <div class="page-article__image">
-          <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
-          <p class="text__category">Citation de la photo</p>
+        <div class="wp-block-file">
+          <a href="http://localhost:8888/wp-morgane/wp-content/uploads/2020/02/ballet_harmony.zip">ballet_harmony</a>
+          <a href="http://localhost:8888/wp-morgane/wp-content/uploads/2020/02/ballet_harmony.zip" class="wp-block-file__button" download="">Télécharger</a>
         </div>
 
-        <div class="page-article__double-image">
-          <div class="page-article__image">
-            <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
-            <p class="text__category">Citation de la photo</p>
-          </div>
-          <div class="page-article__image">
-            <%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %>
-            <p class="text__category">Citation de la photo</p>
-          </div>
-        </div>
-        <h3>Lorem ipsum dolor sit amet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="page-article__gallery component-slider__container js-slider" data-arrows="true">
-          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
-          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
-          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
-          <div class="js-slide"><%= image_tag 'ressources/blog/photo-1.jpg', alt: 'cover' %></div>
-        </div> -->
+        <figure class="wp-block-table">
+          <table class="">
+            <tbody>
+              <tr>
+                <td>title</td>
+                <td>description</td>
+              </tr>
+              <tr>
+                <td>title n°1</td>
+                <td>description n°1</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
       </div>
       <div class="component-share col-md-12 col-lg-10 offset-lg-1">
         <ul class="component-share__categories">
