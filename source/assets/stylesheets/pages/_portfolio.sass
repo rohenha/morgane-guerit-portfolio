@@ -1,7 +1,52 @@
 .page-portfolio
-    background-color: $color-1
+    padding: 100px 0
     h1
-        display: none
+        text-align: center
+
+    &__single
+        margin-bottom: 60px
+        &:not(:last-child)
+            border-bottom: 1px solid rgba($color-1, .2)
+            padding-bottom: 20px
+
+        &--list
+            align-items: center
+            display: flex
+            flex-flow: row wrap
+            justify-content: flex-start
+            li
+                padding: 0 15px
+                width: calc(100% / 3)
+
+                img
+                    cursor: pointer
+                    height: auto
+                    width: 100%
+
+        &--images
+            align-items: center
+            border: 1px solid rgba($color-1, .2)
+            display: flex
+            flex-flow: row wrap
+            justify-content: flex-start
+            margin-bottom: 10px
+            li
+                overflow: hidden
+                padding-top: 30%
+                position: relative
+                width: calc(100% / 3)
+                img
+                    cursor: pointer
+                    height: 100%
+                    left: 0
+                    object-fit: cover
+                    position: absolute
+                    top: 0
+                    transition: transform .3s ease-in-out
+                    width: 100%
+                    &:hover
+                        transform: scale(1.1)
+
     .component-portfolio__list
         li
             background-color: $color-1
@@ -82,30 +127,3 @@
             opacity: 1
             transition: opacity .3s ease-in-out .1s, visibility .1s ease-in-out
             visibility: visible
-
-    .button
-        background-color: $color-6
-        bottom: 40px
-        color: $color-1
-        left: 50%
-        position: fixed
-        transform: translate(-50%, 0)
-        z-index: 5
-
-        .close
-            display: none
-
-        &.selected
-            background-color: $color-2
-            border: 0
-            color: $color-6
-
-            &:hover,
-            &:focus
-                background-color: darken($color-2, 5%)
-
-        &.active
-            .close
-                display: block
-            .filters
-                display: none

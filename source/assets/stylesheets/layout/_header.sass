@@ -1,5 +1,5 @@
 #header
-    padding: 20px 0
+    background: $color-6
     position: fixed
     width: 100%
     z-index: 5
@@ -14,7 +14,6 @@
         &__button
             position: relative
             z-index: 25
-
 
         &__button
             text-align: right
@@ -53,6 +52,7 @@
             align-items: center
             display: flex
             flex-flow: column wrap
+            padding: 20px 0
             text-align: center
             width: 100%
             li
@@ -104,7 +104,6 @@
 
 
     @include media-breakpoint-up(md)
-        background-color: inherit
         .header__button
             display: none
         nav

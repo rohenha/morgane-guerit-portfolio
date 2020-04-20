@@ -6,9 +6,12 @@ html
 
 
 h1,
-h2
+h2,
+h1 a,
+h2 a
     color: $color-2
     font-family: $font-title
+    text-decoration: none
 
 .component-loader h4,
 .component-loader h4 span,
@@ -16,13 +19,21 @@ h2
 .page-error h1 span,
 .soon h1,
 .soon h1 span,
+h1 a,
 h1
     font-size: px2rem(70)
     margin-bottom: 50px
 
-h2
+h2,
+h2 a
     font-size: px2rem(50)
     margin-bottom: 30px
+
+h1,
+h2
+    a
+        font-style: normal
+        margin-bottom: 0
 
 h3
     color: $color-2
@@ -63,8 +74,6 @@ span,
 button
     font-family: $font-regular
     font-size: px2rem($font-size-base)
-    line-height: px2rem(22)
-
 
 p,
 ul,
