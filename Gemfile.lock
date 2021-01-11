@@ -180,7 +180,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -244,7 +244,7 @@ DEPENDENCIES
   middleman-s3_sync
   mime-types
   nokogiri
-  redcarpet (~> 3.3, >= 3.3.3)
+  redcarpet (~> 3.5)
   rspec
   sass (~> 3.4)
   sass-globbing (~> 1.1)
